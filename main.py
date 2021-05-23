@@ -19,13 +19,13 @@ async def dmall(ctx, *, message):
     for user in list(ctx.guild.members):
         try:
             await asyncio.sleep(0.5)
-            print(f"{Fore.RED}[{Fore.RESET}+{Fore.RED}]{Fore.RESET} Sleeping For {Fore.RED}0.5{Fore.RED}{Fore.RESET} Second")
+            print(f"{Fore.RED}Sleeping For 0.5 Second")
             await user.send(message)
-            print(f"{Fore.GREEN}Sent {seth.member}{message}")
-            print(f"{Fore.RED}[{Fore.RESET}+{Fore.RED}]{Fore.RESET} Successfully {Fore.RED}MassDMED{Fore.RED}{Fore.RESET}{i}")
+            print(f"{Fore.GREEN}Sent {seth.member}: {message}")
+            print(f"{Fore.GREEN}Successfully MassDMED {Fore.RESET}{i}")
             i =+ 1  
         except:
-            print(f"{Fore.RED}[{Fore.RESET}!{Fore.RED}]{Fore.RESET} Couldn't Dmall {Fore.RED}{seth.id}{Fore.RED}{Fore.RESET}")
+            print(f"{Fore.RED}Couldn't Dmall {seth.id}")
             pass
 
 seth.run("token", bot=False)
